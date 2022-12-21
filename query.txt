@@ -1,0 +1,23 @@
+---1---
+SELECT *
+FROM `students`
+WHERE YEAR(`date_of_birth`) = 1990;
+
+---2---
+SELECT *
+FROM `courses`
+WHERE `cfu` > 10;
+
+---7---
+SELECT COUNT(`id`) AS `totale`
+FROM `departments`;
+
+---8---
+SELECT COUNT(`id`) AS `totale` 
+FROM `teachers` 
+WHERE `phone` IS NULL;
+
+---9---
+SELECT *
+FROM `exams`
+WHERE `date` > 2020-06-20;
