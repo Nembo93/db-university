@@ -1,0 +1,4 @@
+SELECT `degrees`.`name`, `departments`.`name`, `degrees`.`level`
+FROM `degrees`
+INNER JOIN `departments` on `degrees`.`department_id` = `department_id`
+WHERE `departments`.`name` LIKE "Dipartimento_di_Neuroscienze" AND `degrees`.`level` LIKE "Magistrale"
