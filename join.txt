@@ -22,3 +22,8 @@ SELECT *
 FROM `course_teacher` 
 WHERE `teacher_id` = 44;
 
+---5---
+SELECT `students`.`name`, `students`.`surname`, `degrees`.`name`, `departments`.`name`
+FROM `students`
+INNER JOIN `degrees` on `students`.`degree_id` = `degree_id`
+INNER JOIN  `departments` on `degrees`.`department_id` = `degree_id`
