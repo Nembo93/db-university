@@ -27,3 +27,10 @@ SELECT `students`.`name`, `students`.`surname`, `degrees`.`name`, `departments`.
 FROM `students`
 INNER JOIN `degrees` on `students`.`degree_id` = `degree_id`
 INNER JOIN  `departments` on `degrees`.`department_id` = `degree_id`
+
+---6---
+SELECT `degrees`.`name`, `courses`.`name`, `teachers`.`surname`
+FROM `degrees`
+INNER JOIN `courses` ON `degrees`.`id` = `courses`.`degree_id`
+INNER JOIN `course_teacher` ON `courses`.`id` = `course_teacher`.`course_id`
+INNER JOIN `teachers` ON `course_teacher`.`teacher_id` = `teachers`.`id`;
