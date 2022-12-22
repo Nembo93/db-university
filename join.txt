@@ -9,3 +9,16 @@ SELECT `degrees`.`name`, `departments`.`name`, `degrees`.`level`
 FROM `degrees`
 INNER JOIN `departments` on `degrees`.`department_id` = `department_id`
 WHERE `departments`.`name` LIKE "Dipartimento_di_Neuroscienze" AND `degrees`.`level` LIKE "Magistrale"
+
+---3---
+SELECT `courses`.`name`
+FROM `courses` 
+INNER JOIN `course_teacher` ON `courses`.`id` = `course_teacher`.`course_id`
+INNER JOIN `teachers` ON `course_teacher`.`teacher_id` = `teachers`.`id`
+WHERE `teachers`.`name` LIKE "Fulvio Amato";
+
+---4---
+SELECT * 
+FROM `course_teacher` 
+WHERE `teacher_id` = 44;
+
