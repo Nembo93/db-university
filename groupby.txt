@@ -4,6 +4,11 @@ FROM `students`
 GROUP BY `anno`;
 
 ---2---
-SELECT COUNT (`id`) AS `insegnanti`, `office_address` AS `ufficio`
+SELECT COUNT(`id`) AS `insegnanti`, `office_address` AS `ufficio`
 FROM `teachers`
 GROUP BY `ufficio`;
+
+---3--- NO
+SELECT AVG(`vote`) AS `media_voto`, `exam_id`
+FROM `exam_student`
+GROUP BY `exam_id`;
