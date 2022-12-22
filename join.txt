@@ -1,3 +1,10 @@
+---1---
+SELECT * 
+FROM `students` 
+INNER JOIN `degrees` ON `students`.`degree_id` = `degree_id`
+WHERE `degrees`.`name` LIKE "%Economia%";
+
+---2---
 SELECT `degrees`.`name`, `departments`.`name`, `degrees`.`level`
 FROM `degrees`
 INNER JOIN `departments` on `degrees`.`department_id` = `department_id`
