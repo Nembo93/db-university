@@ -27,6 +27,7 @@ SELECT `students`.`name`, `students`.`surname`, `degrees`.`name`, `departments`.
 FROM `students`
 INNER JOIN `degrees` on `students`.`degree_id` = `degree_id`
 INNER JOIN  `departments` on `degrees`.`department_id` = `degree_id`
+ORDER BY `students`.`surname`, `students`.`name`;
 
 ---6---
 SELECT `degrees`.`name`, `courses`.`name`, `teachers`.`surname`
